@@ -1,0 +1,74 @@
+
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+p {
+  color: #333;
+}
+
+.active .nav-link {
+  /*border-bottom: 5px solid #B1325D;*/
+  color: #B1325D !important;
+}
+
+.jumbotron {
+  background-color: rgb(245, 245, 245);
+}
+
+.kva-custom-toggler.navbar-toggler {
+    border-color: #fff;
+}
+.kva-custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(177,50,93,0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.nav-link {
+  color: #333 !important;
+}
+
+.btn-primary {
+  background-color: #B1325D;
+  border-color: #B1325D;
+}
+
+.kva-logo {
+  position: relative;
+  color: #B1325D;
+  font-size: 1.3rem;
+  top: 2px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kva-bg {
+  background-color: #fff;
+  -webkit-box-shadow: 0 0px 3px #333;
+  -moz-box-shadow: 0 0px 3px #333;
+  box-shadow: 0 0px 3px #aaa;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.kva-intro {
+  font-size: 1.2rem;
+}
+
+.kva-header {
+  color: #B1325D;
+  -webkit-font-smoothing: antialiased;
+}
+
+.kva-demo-header {
+  font-size: 1.3rem;
+}
+
+.kva-demo {
+  background: #002b36;
+  word-wrap: break-word;
+  font-size: 0.9rem;
+  overflow: auto;
+  border-radius: 6px;
+  color: #FFF;
+  margin: 10px 0;
+  padding: 10px;
+}

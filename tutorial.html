@@ -1,0 +1,41 @@
+---
+layout: layout.liquid
+permalink: tutorial.html
+title: Open source key-value database on blockchain
+tutorialActive: active
+---
+
+<main role="main" class="mt-5 px-2">
+  <div class="container">
+    <div class="row mb-2">
+      <div class="md-12">
+        <h3>Tutorial</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="md-12">
+        <h4 class="kva-demo-header">Create a namespace</h4>
+        <pre class="kva-demo">
+kevacoin-cli keva_namespace my_space
+        </pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="md-12">
+        <h4 class="kva-demo-header">Add key-value pair</h4>
+        <pre class="kva-demo">
+kevacoin-cli keva_put first_key "Hello world"
+        </pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="md-12">
+        <h4 class="kva-demo-header">Search for keys</h4>
+        <pre class="kva-demo">
+kevacoin-cli keva_filter my_space
+        </pre>
+      </div>
+    </div>
+    <hr>
+  </div> <!-- /container -->
+</main>
