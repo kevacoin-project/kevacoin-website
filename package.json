@@ -1,0 +1,26 @@
+{
+  "name": "kevacoin-website",
+  "version": "0.1.1",
+  "description": "Source for https://kevacoin.org",
+  "main": ".eleventy.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevacoin-project/kevacoin-website.git"
+  },
+  "author": "the Kevacoin Core Developers",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevacoin-project/kevacoin-website/issues"
+  },
+  "homepage": "https://github.com/kevacoin-project/kevacoin-website#readme"
+}
