@@ -4,7 +4,7 @@ body {
 }
 
 p {
-  color: #333;
+  color:rgb(32, 33, 36);
 }
 
 .active .nav-link {
@@ -51,10 +51,13 @@ p {
 
 .kva-intro {
   font-size: 1.2rem;
+  line-height: 1.9rem;
 }
 
 .kva-header {
   color: #B1325D;
+  font-size: 2.0rem;
+  margin-bottom: 1.3rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,4 +74,16 @@ p {
   color: #FFF;
   margin: 10px 0;
   padding: 10px;
+}
+
+.kva-title {
+  color: #B1325D;
+  font-size: 2.0rem;
+  margin-bottom: 1.5rem;
+}
+
+.kva-faq h1 {
+  color: #B1325D;
+  font-size: 2.0rem;
+  margin-bottom: 1.5rem;
 }
