@@ -87,3 +87,14 @@ p {
   font-size: 2.0rem;
   margin-bottom: 1.5rem;
 }
+
+.kva-documentation h1 {
+  color: #B1325D;
+  font-size: 2.0rem;
+  margin-bottom: 1.5rem;
+}
+
+.kva-documentation h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
