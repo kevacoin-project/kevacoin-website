@@ -57,7 +57,14 @@
       <div class="col-md-12">
         <h4 class="kva-demo-header">Create a namespace</h4>
         <pre class="kva-demo">
-kevacoin-cli keva_namespace my_space
+kevacoin-cli keva_namespace "my first namespace"
+
+[
+  {
+    "txid": "244fcb0f30e26b0fbf346e82494a7ae5e8c3d7e3e70974105e9a19d1b92cb4f5",
+    "namespaceId": "NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC"
+  }
+]
         </pre>
       </div>
     </div>
@@ -65,7 +72,19 @@ kevacoin-cli keva_namespace my_space
       <div class="col-md-12">
         <h4 class="kva-demo-header">Add key-value pair</h4>
         <pre class="kva-demo">
-kevacoin-cli keva_put first_key "Hello world"
+kevacoin-cli keva_put NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first key" "first value"
+
+eb6eb57259b5468a156bbca77d56b4863349e1b4bcf7795a6037aef39530b319
+        </pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h4 class="kva-demo-header">Get key-value pair</h4>
+        <pre class="kva-demo">
+kevacoin-cli keva_get NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first key"
+
+first value
         </pre>
       </div>
     </div>
@@ -73,7 +92,18 @@ kevacoin-cli keva_put first_key "Hello world"
       <div class="col-md-12">
         <h4 class="kva-demo-header">Search for keys</h4>
         <pre class="kva-demo">
-kevacoin-cli keva_filter my_space
+kevacoin-cli keva_filter NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first*"
+
+[
+  {
+    "name": "first key",
+    "value": "first value",
+    "txid": "7620f6b81997f99c47d478157cbe8129b9841afa0337cb9a80a78d9d9d2bf27f",
+    "vout": 0,
+    "address": "K9ATguB1UJjTKgYmySGWf7sHBVMf9ME2zM",
+    "height": 650
+  }
+]
         </pre>
       </div>
     </div>
