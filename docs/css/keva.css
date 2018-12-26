@@ -1,6 +1,7 @@
 
 body {
   font-family: "Open Sans", Helvetica, sans-serif;
+  padding-top: 3.5rem;
 }
 
 p {
@@ -42,9 +43,9 @@ p {
 
 .kva-bg {
   background-color: #fff;
-  -webkit-box-shadow: 0 0px 3px #333;
-  -moz-box-shadow: 0 0px 3px #333;
-  box-shadow: 0 0px 3px #aaa;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
   padding-top: 7px;
   padding-bottom: 7px;
 }
@@ -97,4 +98,10 @@ p {
 .kva-documentation h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.kva-documentation pre {
+  background-color: #ddd;
+  padding: 12px 7px 12px 7px;
+  border-radius: 4px;
 }
