@@ -55,23 +55,100 @@
   <div class="container">
     <div class="row mb-2">
       <div class="col-md-12">
-        <h3 class="kva-title">Tutorial</h3>
+        <h3 class="kva-title">Kevacoin API Tutorial</h3>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <p class="kva-tutorial-title">
-          <a href="tutorial_api.html">API/Command line Tutorial</a>
-        </p>
+        <h4 class="kva-demo-header">Start Kevacoin client</h4>
+        <p>Start the command line client:</p>
+        <pre class="kva-demo">kevacoind</pre>
+        <p>Or start the GUI client:</p>
+        <pre class="kva-demo">kevacoin-qt</pre>
       </div>
     </div>
-    <div class="row mt-2">
+    <div class="row mt-3">
       <div class="col-md-12">
-        <p class="kva-tutorial-title">
-          <a href="tutorial_solo_mining.html">Solo Mining Tutorial</a>
-        </p>
+        <h4 class="kva-demo-header">Create a namespace</h4>
+        <p>This will create a namespace in which we can later add key-value pairs.</p>
+        <pre class="kva-demo">
+kevacoin-cli keva_namespace "my first namespace"
+
+[
+  {
+    "txid": "244fcb0f30e26b0fbf346e82494a7ae5e8c3d7e3e70974105e9a19d1b92cb4f5",
+    "namespaceId": "NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC"
+  }
+]</pre>
       </div>
     </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h4 class="kva-demo-header">Add key-value pair</h4>
+        <p>Add the first key-value pair in the newly created namespace.</p>
+        <pre class="kva-demo">
+kevacoin-cli keva_put NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first key" "first value"
+
+eb6eb57259b5468a156bbca77d56b4863349e1b4bcf7795a6037aef39530b319</pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h4 class="kva-demo-header">Get key-value pair</h4>
+        <p>Retrieve the value we just added.</p>
+        <pre class="kva-demo">
+kevacoin-cli keva_get NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first key"
+
+first value</pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h4 class="kva-demo-header">Get pending changes</h4>
+        <p>
+          It will take up to two minutes for the transaction to be confirmed and add to the blockchain.
+          Use the <code>keva_pending</code> command to list the pending operations.
+        </p>
+        <pre class="kva-demo">
+kevacoin-cli keva_pending
+
+[
+  {
+    "op": "keva_namespace",
+    "namespace": "NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC",
+    "display name": "my first namespace",
+    "txid": "244fcb0f30e26b0fbf346e82494a7ae5e8c3d7e3e70974105e9a19d1b92cb4f5"
+  },
+  {
+    "op": "keva_put",
+    "namespace": "NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC",
+    "key": "first key",
+    "value": "first value",
+    "txid": "eb6eb57259b5468a156bbca77d56b4863349e1b4bcf7795a6037aef39530b319"
+  }
+]</pre>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <h4 class="kva-demo-header">Search for keys</h4>
+        <p>Search for keys that are in the blockchain using regular expression. The values will not be shown if the operations are still pending.</p>
+        <pre class="kva-demo">
+kevacoin-cli keva_filter NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first*"
+
+[
+  {
+    "name": "first key",
+    "value": "first value",
+    "txid": "7620f6b81997f99c47d478157cbe8129b9841afa0337cb9a80a78d9d9d2bf27f",
+    "vout": 0,
+    "address": "K9ATguB1UJjTKgYmySGWf7sHBVMf9ME2zM",
+    "height": 650
+  }
+]</pre>
+      </div>
+    </div>
+    <hr>
   </div> <!-- /container -->
 </main>
 

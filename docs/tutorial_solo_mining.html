@@ -1,0 +1,168 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./images/fav_icon.png">
+
+    <title>Open source key-value database on blockchain</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/keva.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark kva-bg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/logo.png" width="32" height="32" alt="Kevacoin">
+          <span class="kva-logo">Kevacoin</span>
+        </a>
+        <button class="navbar-toggler kva-custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mr-5 pr-5" id="navbarsDefault">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item px-2 active">
+              <a class="nav-link" href="tutorial.html">Tutorial</a>
+            </li>
+            <li class="nav-item px-2 ">
+              <a class="nav-link" href="documentation.html">Documenation</a>
+            </li>
+            <li class="nav-item px-2 ">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+            <li class="nav-item px-2 ">
+              <a class="nav-link" href="mining.html">Mining</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    
+<main role="main" class="mt-5">
+    <div class="container kva-documentation">
+    <!--start of tutorial -->
+
+<h1>Solo Mining</h1>
+<p>Kevacoin can be mined through CPU, AMD and Nvidia GPU. If you want to mine Kevacoin using CPU, it is highly recommended that your CPU supports AES-NI instrcution as the Cryptonight hash algorithm performs much faster using the instruction. Most modern Intel Core <sup>TM</sup> and AMD CPUs support the AES-NI instruction.</p>
+<h2>Overview</h2>
+<p>You need to run the following programs in order to do solo-mining:</p>
+<ol>
+<li>Kevacoin client.</li>
+<li>Customized NOMP(Node Open Mining Portal) with Kevacoin support.</li>
+<li>One of the miners (CPU, Nvidia or AMD).</li>
+</ol>
+<h2>Setup and run Kevacoin client</h2>
+<p>Download the Kevacoin client from https://kevacoin.org, choose the specific client for your platform. Alternatively, you can also build the client from the source (https://github.com/kevacoin-project/kevacoin). When building from the source, make sure to use the current release tag.</p>
+<p>Before running the client, add a file <code>kevacoin.conf</code> to the Kevacoin data directory with the following content:</p>
+<pre>
+rpcuser=yourusername
+rpcpassword=yourpassowrd
+rpcport=19332
+</pre>
+<p>Make sure to replace <code>yourusername</code> and <code>yourpassword</code> with your own user name and secure password.</p>
+<p>The table below lists the Kevacoin data directory for different platforms.</p>
+<table>
+<thead>
+<tr>
+<th>OS</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Linux</td>
+<td>~/.kevacoin</td>
+</tr>
+<tr>
+<td>Windows</td>
+<td>C:\Users\YourUserName\Appdata\Roaming\Kevacoin</td>
+</tr>
+<tr>
+<td>macOS</td>
+<td>~/Library/Application Support/Kevacoin</td>
+</tr>
+</tbody>
+</table>
+<p>Once the <code>kevacoin.conf</code> file is added, start the Kevacoin client:</p>
+<pre>
+kevacoind
+</pre>
+<p>If you don't have a Kevacoin address yet, generate a new one:</p>
+<pre>
+kevacoin-cli getnewaddress
+
+VFgAsW4SP7GtMwb4Uvf9Z6nZ4j8qWbs5fV
+</pre>
+<p>Kevacoin address always starts with a prefix 'V'.</p>
+<h2>Setup and run NOMP</h2>
+<p>NOMP requires Node.js and Redis. So before running NOMP, you need to install both.</p>
+<h3>Install Node.js</h3>
+<p>Download Node.js from https://nodejs.org/en/download/ and follow the instructions.</p>
+<h3>Install Redis</h3>
+<p>For Linux, follow the instructions: https://redis.io/topics/quickstart</p>
+<p>For Windows, download the installer from https://github.com/MicrosoftArchive/redis/releases and run the installer.</p>
+<p>For macOS, follow the instructions: https://medium.com/@petehouston/install-and-config-redis-on-mac-os-x-via-homebrew-eb8df9a4f298</p>
+<h3>Install NOMP</h3>
+<p>Once Node.js and Redis are installed, we are ready to install NOMP:</p>
+<pre>
+git clone https://github.com/kevacoin-project/node-open-mining-portal.git nomp
+cd nomp
+npm update
+</pre>
+<p>NOMP needs two configuration files, one for the general configuration and the other for the pool configuration.</p>
+<p>Kevacoin NOMP comes with an example general configuration file <code>config_keva_solo.json</code>, just rename it to <code>config.json</code>.</p>
+<p>The pool configuration file is under <code>pool_configs/kevacoin.json</code>. Make sure to make the following changes:</p>
+<ol>
+<li>Change the address to point to your wallet address.</li>
+<li>Replace <code>yourusername</code> and <code>yourpassword</code> with your own user name and secure password, as specified in your Kevacoin client's <code>kevacoin.conf</code> file.</li>
+</ol>
+<p>Run NOMP:</p>
+<pre>
+node init.js
+</pre>
+<h2>Run the miner</h2>
+<p>Download and install the miner according to your platform from https://kevacoin.org/mining.html.</p>
+<h3>Nvidia GPU miner</h3>
+<p>To run the Nvidia GPU miner:</p>
+<pre>
+ccminer -a keva -o stratum+tcp://127.0.0.1:3032 -u "your address" -p x
+</pre>
+<h3>AMD GPU miner</h3>
+<p>AMD GPU miner requires a configuration file <code>config.json</code>. You should configure the &quot;threads&quot; section to optimize for your GPU. The config file has the same format as XMRig-AMD (https://github.com/xmrig/xmrig-amd) and can be configured in the same way. Note that the &quot;pools&quot; section in the config file is not used.</p>
+<p>To run the AMD GPU miner:</p>
+<pre>
+ccminer -a keva -o stratum+tcp://127.0.0.1:3032 -u "your address" -p x
+</pre>
+<h3>CPU miner</h3>
+<p>CPU miner requires a configuration file <code>config.json</code>. You should change settings in the file to optimize for your CPU. The config file has the same format as XMRig-AMD (https://github.com/xmrig/xmrig) and can be configured in the same way. Note that the &quot;pools&quot; section in the config file is not used.</p>
+<p>To run the CPU miner:</p>
+<pre>
+ccminer -a keva -o stratum+tcp://127.0.0.1:3032 -u "your address" -p x
+</pre>
+
+    <!--end of documentation -->
+    </div>
+</main>
+
+    <footer class="container mt-5">
+      <p>&copy; Kevacoin Project 2018 Released under the MIT license</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

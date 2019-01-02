@@ -102,6 +102,27 @@ p {
   margin-bottom: 1.5rem;
 }
 
+.kva-documentation h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1.8rem;
+  margin-bottom: 1.0rem;
+}
+
+.kva-documentation table {
+  border-collapse: collapse;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.kva-documentation table, th, td {
+  border: 1px solid #ddd;
+}
+
+.kva-documentation th, td {
+  padding: 10px;
+}
+
 .kva-documentation pre {
   background-color: #ddd;
   padding: 12px 7px 12px 7px;
@@ -127,4 +148,14 @@ p {
   top: 8px;
   margin-right: 10px;
   font-size: 2.4rem !important;
+}
+
+.kva-tutorial-title {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.kva-tutorial-title a {
+  text-decoration: none; /* no underline */
 }
