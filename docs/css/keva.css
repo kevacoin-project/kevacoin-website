@@ -4,6 +4,10 @@ body {
   padding-top: 3.5rem;
 }
 
+main {
+  min-height: 600px;
+}
+
 p {
   color:rgb(32, 33, 36);
 }
@@ -171,4 +175,37 @@ p {
 
 .kva-tutorial-title a {
   text-decoration: none; /* no underline */
+}
+
+.kva-footer {
+  margin: 30px 0 0 0;
+  padding: 30px 0 0 0;
+  background-color: #333;
+  min-height: 300px;
+  max-width: none;
+}
+
+.kva-footer-title {
+  color:#fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.kva-footer-link {
+  display: block;
+  margin-bottom: 7px;    
+  color:#aaa;
+  text-decoration: none;
+}
+
+.kva-footer-link:hover 
+{
+  color:#aaa;
+  text-decoration:none; 
+  cursor:pointer;  
+}
+
+.kva-license {  
+  color:#aaa;
+  font-size: 0.9rem;
 }
