@@ -55,6 +55,19 @@ p {
   line-height: 1.9rem;
 }
 
+.kva-ann {
+  color: chocolate;
+  background-color: lightgoldenrodyellow;
+  border-color: chocolate;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 30px 0;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
 .kva-header {
   color: #B1325D;
   font-size: 2.0rem;
