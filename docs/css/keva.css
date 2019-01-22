@@ -79,6 +79,14 @@ p {
   -webkit-font-smoothing: antialiased;
 }
 
+.kva-subheader {
+  color: #B1325D;
+  font-size: 1.6rem;
+  margin-top: 2.0rem;
+  margin-bottom: 0.8rem;
+  -webkit-font-smoothing: antialiased;
+}
+
 .kva-demo-header {
   font-size: 1.5rem;
   margin-top: 1.5rem;
@@ -193,19 +201,19 @@ p {
 
 .kva-footer-link {
   display: block;
-  margin-bottom: 7px;    
+  margin-bottom: 7px;
   color:#aaa;
   text-decoration: none;
 }
 
-.kva-footer-link:hover 
+.kva-footer-link:hover
 {
   color:#aaa;
-  text-decoration:none; 
-  cursor:pointer;  
+  text-decoration:none;
+  cursor:pointer;
 }
 
-.kva-license {  
+.kva-license {
   color:#aaa;
   font-size: 0.9rem;
 }
