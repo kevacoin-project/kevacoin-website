@@ -51,6 +51,16 @@ ul li {
   border-color: #B1325D;
 }
 
+.btn-outline-primary {
+  border-color: #B1325D;
+  color: #B1325D;
+}
+
+.kva-top-btn {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
 .kva-logo {
   color: #B1325D;
   font-size: 1.5rem;
