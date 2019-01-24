@@ -233,4 +233,22 @@ ul li {
 .kva-license {
   color:#aaa;
   font-size: 0.9rem;
+  margin-bottom: 0px;
+}
+
+.kva-pr-p {
+  font-size: 0.8rem;
+}
+
+.kva-pr-a {
+  font-size: 0.8rem;
+  color:#aaa;
+  text-decoration:none;
+}
+
+.kva-pr-a:hover
+{
+  color:#aaa;
+  text-decoration:none;
+  cursor:pointer;
 }
