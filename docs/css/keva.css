@@ -51,9 +51,21 @@ ul li {
   border-color: #B1325D;
 }
 
+.btn-primary:hover {
+  color: #fff;
+  background-color: #CB4C76;
+  border-color: #CB4C76;
+}
+
 .btn-outline-primary {
   border-color: #B1325D;
   color: #B1325D;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #CB4C76;
+  border-color: #CB4C76;
 }
 
 .kva-top-btn {
@@ -68,7 +80,7 @@ ul li {
   font-style: italic;
   -webkit-font-smoothing: antialiased;
   position: relative;
-  top: 2px;
+  top: 3px;
 }
 
 .kva-bg {
@@ -88,14 +100,10 @@ ul li {
 .kva-ann {
   color: chocolate;
   background-color: lightgoldenrodyellow;
-  border-color: chocolate;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 2px;
   padding: 10px;
   margin: 30px 0;
   text-align: center;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .kva-header {
