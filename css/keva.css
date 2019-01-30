@@ -26,7 +26,6 @@ ul li {
 }
 
 .active .nav-link {
-  /*border-bottom: 5px solid #B1325D;*/
   color: #B1325D !important;
 }
 
@@ -44,7 +43,9 @@ ul li {
 .nav-link {
   color: #333 !important;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
 }
 
 .btn-primary {
@@ -80,10 +81,10 @@ ul li {
 }
 
 .kva-logo {
+  font-family: "Dosis";
   color: #B1325D;
   font-size: 1.5rem;
   font-weight: 700;
-  font-style: italic;
   -webkit-font-smoothing: antialiased;
   position: relative;
   top: 3px;
