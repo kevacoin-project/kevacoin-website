@@ -20,6 +20,11 @@ ul li {
   margin-bottom: 10px;
 }
 
+.jumbotron {
+  background-image: url('../images/keva_background_sm.jpg');
+  border-radius: 0px;
+}
+
 .active .nav-link {
   /*border-bottom: 5px solid #B1325D;*/
   color: #B1325D !important;
@@ -54,8 +59,8 @@ ul li {
 }
 
 .btn-outline-primary {
-  border-color: #B1325D;
-  color: #B1325D;
+  border-color: #fff;
+  color: #fff;
 }
 
 .btn-outline-primary:hover {
@@ -67,6 +72,11 @@ ul li {
 .kva-top-btn {
   margin-top: 5px;
   margin-right: 5px;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 100em;
+  border-width: 2px;
 }
 
 .kva-logo {
@@ -81,32 +91,43 @@ ul li {
 
 .kva-bg {
   background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 7px 0px;
+  -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   padding-top: 7px;
   padding-bottom: 7px;
 }
 
 .kva-intro {
+  color: #fff;
   font-size: 1.2rem;
   line-height: 1.9rem;
 }
 
 .kva-ann {
   color: chocolate;
-  background-color: lightgoldenrodyellow;
+  background-color: lightyellow;
   padding: 10px;
   margin: 30px 0;
   text-align: center;
   font-size: 1.1rem;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
 }
 
 .kva-header {
-  color: #B1325D;
   font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 1.3rem;
   -webkit-font-smoothing: antialiased;
+}
+
+.kva-em {
+  color: #FFAD00;
+  font-style: italic;
 }
 
 .kva-subheader {
