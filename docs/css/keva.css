@@ -9,6 +9,10 @@ main {
   min-height: 600px;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 p {
   color:rgb(90, 102, 113);
   font-size: 1.1rem;
@@ -25,6 +29,12 @@ ul li {
   background-image: url('../images/keva_background_sm.jpg');
   border-radius: 0px;
   margin-bottom: 0;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 6rem 2rem;
+  }
 }
 
 .active .nav-link {
@@ -108,12 +118,11 @@ ul li {
 }
 
 .kva-ann {
-  border-bottom: solid 1px #FFAD00;
   color: chocolate;
-  background-color: lightyellow;
-  padding: 10px;
+  background-color: rgb(243, 246, 251);
+  padding: 5px;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
 }
 
 .kva-header {
@@ -223,7 +232,7 @@ ul li {
 
 .kva-download a {
   color: #710328;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
 }
 
 .kva-download-icon {
@@ -304,9 +313,10 @@ ul li {
 }
 
 .kva-benefit {
-  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  -moz-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  -webkit-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  border-radius: 4px;
   padding: 20px 0 20px 0;
 }
 
@@ -314,4 +324,16 @@ ul li {
   font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
   margin: 20px 0 20px 0;
+}
+
+.kva_title_img {
+  width: 110px;
+  height: 110px;
+  border-radius: 200px;
+}
+
+#contribute {
+  background-color: rgb(243, 246, 251);
+  padding-bottom: 40px;
+  margin: 40px 0 40px;
 }
