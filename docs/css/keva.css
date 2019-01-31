@@ -324,13 +324,19 @@ ul li {
   -webkit-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
   box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
   border-radius: 4px;
-  padding: 20px 0 20px 0;
+  padding: 30px 0 30px 0;
+  min-height: 380px;
 }
 
 .kva-benefit-title {
   font-family: "Dosis", sans-serif;
-  font-size: 1.5rem;
-  margin: 20px 0 20px 0;
+  font-size: 1.6rem;
+  margin: 20px 30px 20px 30px;
+}
+
+.kva-benefit-text {
+  font-size: 1.1rem;
+  margin: 0 30px 0 30px;
 }
 
 .kva_title_img {
