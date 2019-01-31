@@ -319,6 +319,10 @@ ul li {
   margin: 2.0rem 0 2.5rem 0;
 }
 
+.kva-section-summary-white {
+  color: #fff;
+}
+
 .kva-benefit {
   -moz-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
   -webkit-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
@@ -357,7 +361,7 @@ ul li {
 }
 
 #protocol {
-  background-color: rgb(243, 246, 251);
+  background-color: #0080DD;
   padding-bottom: 40px;
   margin: 40px 0 0;
 }
@@ -365,14 +369,19 @@ ul li {
 .kva-protocol-name {
   font-family: "Dosis", sans-serif;
   font-weight: 600;
-  color: rgb(33, 57, 85);
   text-align: right;
 }
 
 .kva-protocol-name p {
   font-size: 1.3rem;
+  color: #fff;
 }
 
 .kva-protocol {
   text-align: left;
+}
+
+.kva-protocol p {
+  text-align: left;
+  color: #fff;
 }
