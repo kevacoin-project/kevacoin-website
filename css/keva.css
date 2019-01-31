@@ -2,6 +2,7 @@
 body {
   font-family: "Open Sans", Helvetica, sans-serif;
   padding-top: 3.5rem;
+  color: rgb(39, 63, 91);
 }
 
 main {
@@ -9,20 +10,21 @@ main {
 }
 
 p {
-  color:#4E5161;
-  font-size: 1.2rem;
+  color:rgb(90, 102, 113);
+  font-size: 1.1rem;
   line-height: 32px;
 }
 
 ul li {
-  color:#4E5161;
-  font-size: 1.2rem;
+  color:rgb(90, 102, 113);
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
 .jumbotron {
   background-image: url('../images/keva_background_sm.jpg');
   border-radius: 0px;
+  margin-bottom: 0;
 }
 
 .active .nav-link {
@@ -41,7 +43,7 @@ ul li {
 }
 
 .nav-link {
-  color: #333 !important;
+  color: rgb(90, 102, 113) !important;
   margin-bottom: 0;
   font-size: 18px;
   font-family: "Dosis", sans-serif;
@@ -106,15 +108,12 @@ ul li {
 }
 
 .kva-ann {
+  border-bottom: solid 1px #FFAD00;
   color: chocolate;
   background-color: lightyellow;
   padding: 10px;
-  margin: 30px 0;
   text-align: center;
   font-size: 1.1rem;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
-  box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
 }
 
 .kva-header {
@@ -157,20 +156,26 @@ ul li {
 }
 
 .kva-title {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.kva-sub-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.7rem;
   margin-bottom: 1.5rem;
 }
 
 .kva-faq h1 {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem;
 }
 
 .kva-documentation h1 {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -235,7 +240,8 @@ ul li {
 }
 
 .kva-tutorial-title a {
-  text-decoration: none; /* no underline */
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .kva-footer {
@@ -287,4 +293,25 @@ ul li {
   color:#aaa;
   text-decoration:none;
   cursor:pointer;
+}
+
+.kva-section-summary {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.40rem;
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 2.0rem 0 2.5rem 0;
+}
+
+.kva-benefit {
+  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+  padding: 20px 0 20px 0;
+}
+
+.kva-benefit-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  margin: 20px 0 20px 0;
 }
