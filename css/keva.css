@@ -10,7 +10,12 @@ main {
 }
 
 a {
+  color: #B1325D;
   text-decoration: none !important;
+}
+
+a:hover {
+  color: #CB4C76;
 }
 
 p {
@@ -29,6 +34,7 @@ ul li {
   background-image: url('../images/keva_background_sm.jpg');
   border-radius: 0px;
   margin-bottom: 0;
+  text-align: center;
 }
 
 @media (min-width: 576px) {
@@ -115,6 +121,7 @@ ul li {
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.9rem;
+  margin-bottom: 5.0rem;
 }
 
 .kva-ann {
@@ -126,7 +133,7 @@ ul li {
 }
 
 .kva-header {
-  font-size: 2.0rem;
+  font-size: 3.2rem;
   font-family: "Dosis", sans-serif;
   font-weight: 600;
   color: #fff;
@@ -223,7 +230,7 @@ ul li {
 
 .kva-download {
   text-align: center;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(243, 246, 251);
   padding: 10px 5px 20px 5px;
   border-radius: 2px;
   min-width: 230px;
@@ -231,7 +238,6 @@ ul li {
 }
 
 .kva-download a {
-  color: #710328;
   text-decoration: none;
 }
 
@@ -263,8 +269,9 @@ ul li {
 
 .kva-footer-title {
   color:#fff;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
 }
 
 .kva-footer-link {
