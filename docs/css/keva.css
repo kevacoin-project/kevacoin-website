@@ -2,27 +2,45 @@
 body {
   font-family: "Open Sans", Helvetica, sans-serif;
   padding-top: 3.5rem;
+  color: rgb(39, 63, 91);
 }
 
 main {
   min-height: 600px;
 }
 
+a {
+  color: #B1325D;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #CB4C76;
+}
+
 p {
-  color:#4E5161;
-  font-size: 1.2rem;
+  color:rgb(90, 102, 113);
+  font-size: 1.1rem;
   line-height: 32px;
 }
 
 ul li {
-  color:#4E5161;
-  font-size: 1.2rem;
+  color:rgb(90, 102, 113);
+  font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
 .jumbotron {
   background-image: url('../images/keva_background_sm.jpg');
   border-radius: 0px;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 6rem 2rem;
+  }
 }
 
 .active .nav-link {
@@ -41,7 +59,7 @@ ul li {
 }
 
 .nav-link {
-  color: #333 !important;
+  color: rgb(90, 102, 113) !important;
   margin-bottom: 0;
   font-size: 18px;
   font-family: "Dosis", sans-serif;
@@ -103,22 +121,19 @@ ul li {
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.9rem;
+  margin-bottom: 5.0rem;
 }
 
 .kva-ann {
   color: chocolate;
-  background-color: lightyellow;
-  padding: 10px;
-  margin: 30px 0;
+  background-color: rgb(243, 246, 251);
+  padding: 5px;
   text-align: center;
-  font-size: 1.1rem;
-  -moz-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
-  box-shadow: rgba(0, 0, 0, 0.2) 2px 3px 10px 0px;
+  font-size: 1.0rem;
 }
 
 .kva-header {
-  font-size: 2.0rem;
+  font-size: 3.2rem;
   font-family: "Dosis", sans-serif;
   font-weight: 600;
   color: #fff;
@@ -157,20 +172,26 @@ ul li {
 }
 
 .kva-title {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.kva-sub-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.7rem;
   margin-bottom: 1.5rem;
 }
 
 .kva-faq h1 {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem;
 }
 
 .kva-documentation h1 {
-  color: #B1325D;
-  font-size: 2.0rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 2.1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -209,7 +230,7 @@ ul li {
 
 .kva-download {
   text-align: center;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(243, 246, 251);
   padding: 10px 5px 20px 5px;
   border-radius: 2px;
   min-width: 230px;
@@ -217,8 +238,7 @@ ul li {
 }
 
 .kva-download a {
-  color: #710328;
-  text-decoration: none; /* no underline */
+  text-decoration: none;
 }
 
 .kva-download-icon {
@@ -235,7 +255,8 @@ ul li {
 }
 
 .kva-tutorial-title a {
-  text-decoration: none; /* no underline */
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .kva-footer {
@@ -248,8 +269,9 @@ ul li {
 
 .kva-footer-title {
   color:#fff;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 1.9rem;
 }
 
 .kva-footer-link {
@@ -287,4 +309,44 @@ ul li {
   color:#aaa;
   text-decoration:none;
   cursor:pointer;
+}
+
+.kva-section-summary {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.40rem;
+  font-weight: 600;
+  font-size: 1.9rem;
+  margin: 2.0rem 0 2.5rem 0;
+}
+
+.kva-benefit {
+  -moz-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  -webkit-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  border-radius: 4px;
+  padding: 30px 0 30px 0;
+  min-height: 380px;
+}
+
+.kva-benefit-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
+  margin: 20px 30px 20px 30px;
+}
+
+.kva-benefit-text {
+  font-size: 1.1rem;
+  margin: 0 30px 0 30px;
+}
+
+.kva_title_img {
+  width: 110px;
+  height: 110px;
+  border-radius: 200px;
+}
+
+#contribute {
+  background-color: rgb(243, 246, 251);
+  padding-bottom: 40px;
+  margin: 40px 0 40px;
 }
