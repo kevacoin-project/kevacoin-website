@@ -243,6 +243,12 @@ ul li {
   margin: 15px;
 }
 
+.kva-download-shadow {
+  -moz-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  -webkit-box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+  box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
+}
+
 @media (min-width: 576px) {
   .kva-download {
     min-width: 300px;
