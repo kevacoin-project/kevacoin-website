@@ -281,7 +281,7 @@ ul li {
   margin: 0 0 0 0;
   padding: 30px 0 0 0;
   background-color: #333;
-  min-height: 300px;
+  min-height: 330px;
   max-width: none;
 }
 
@@ -348,6 +348,7 @@ ul li {
   border-radius: 4px;
   padding: 30px 0 30px 0;
   min-height: 380px;
+  margin-top: 10px;
 }
 
 .kva-benefit-title {
@@ -357,14 +358,20 @@ ul li {
 }
 
 .kva-benefit-text {
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   margin: 0 30px 0 30px;
 }
 
-.kva_title_img {
+.kva-title-img {
   width: 110px;
   height: 110px;
   border-radius: 200px;
+}
+
+#benefits {
+  background-color: #fff;
+  padding-bottom: 30px;
+  margin: 10px 0 20px;
 }
 
 #contribute {
@@ -381,7 +388,17 @@ ul li {
 #protocol {
   background-color: #0080DD;
   padding-bottom: 40px;
-  margin: 40px 0 0;
+}
+
+#developer {
+  background-color: rgb(243, 246, 251);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+#everyone {
+  background-color: #fff;
+  margin-top: 20px;
 }
 
 .kva-protocol-name {
@@ -402,4 +419,25 @@ ul li {
 .kva-protocol p {
   text-align: left;
   color: #fff;
+}
+
+.kva-people {
+  max-height: 85%;
+  max-width: 85%;
+  border-radius: 4px;
+}
+
+.kva-people-title {
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: rgb(39, 63, 91);
+  text-align: left;
+  margin-bottom: 7px;
+}
+
+.kva-people-text {
+  text-align: left;
+  font-size: 1.0rem;
+  margin-bottom: 16px;
 }
