@@ -422,9 +422,15 @@ ul li {
 }
 
 .kva-people {
-  max-height: 85%;
-  max-width: 85%;
   border-radius: 4px;
+  margin-bottom: 20px;
+  padding: 0 20px 0 20px;
+}
+
+@media (min-width: 992px) {
+  .kva-people {
+    padding: 0 40px 0 40px;
+  }
 }
 
 .kva-people-title {
