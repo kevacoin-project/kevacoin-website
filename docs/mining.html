@@ -60,7 +60,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <p>Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn is Cryptonight V8 (variant 2).
+                <p>Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn is Cryptonight R (variant 4).
                 Cryptonight based cryptocurrencies (e.g. monero, bytecoin) have different header structure than Bitcoin/Litecoin. Therefore, the existing Cryptonight miners (e.g. XMRig) are incompatible with Kevacoin.
                 We provide reference implementations for CPU, AMD and Nvidia GPU based on ccminer.
                 </p>
@@ -69,43 +69,31 @@
 
         <h4 class="mt-4 kva-sub-title">Mining Software</h4>
         <div class="row">
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-nvidia/releases/"><i class="fa fa-windows kva-download-icon"></i>Windows 10 64-bit Nvidia</a>
-            </div>
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-amd/releases/"><i class="fa fa-windows kva-download-icon"></i>Windows 10 64-bit AMD</a>
-            </div>
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-cpu/releases/"><i class="fa fa-windows kva-download-icon"></i>Windows 10 64-bit CPU</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-nvidia"><i class="fa fa-linux kva-download-icon"></i>Linux Nvidia source</a>
-            </div>
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-amd"><i class="fa fa-linux kva-download-icon"></i>Linux AMD source</a>
-            </div>
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/ccminer-cpu"><i class="fa fa-linux kva-download-icon"></i>Linux CPU source</a>
-            </div>
-        </div>
-
-        <h4 class="mt-5 kva-sub-title">Mining Pools / Solo Mining</h4>
-        <div class="row">
             <div class="col-md-12">
                 <p>
-                    We provide a reference implementation of Kevacoin mining pool based on NOMP
-                    (<a href="https://github.com/zone117x/node-open-mining-portal">Node Open Ming Portal</a>).
-                    You can also use it for solo mining by running it on your local machine and connect your miner to it.
+                    Even though Kevacoin is based on Bitcoin/Litecoin, we slightly modified the header structure to make it compatible with Monero mining software. As a result, one can use any Monero mining software to mine Kevacoin (e.g. XMRig or XMR-Stak).
                 </p>
             </div>
         </div>
+
+        <h4 class="mt-5 kva-sub-title">Solo Mining</h4>
         <div class="row">
-            <div class="col-lg-4">
-                <a class="btn kva-download kva-download-shadow" href="https://github.com/kevacoin-project/node-open-mining-portal">
-                    <i class="fa fa-github kva-download-icon"></i>Mining Pool Software
-                </a>
+            <div class="col-md-12">
+                <p>
+                    We provide a reference implementation of Kevacoin mining stratum <a href="https://github.com/kevacoin-project/keva-stratum">keva-stratum</a> based on
+                    <a href="https://github.com/sammy007/monero-stratum">monero-stratum</a>. It is easy to build from source code on Linux and
+                    macOS. For Windows, we provide a <a href="https://github.com/kevacoin-project/keva-stratum/releases">pre-built binary</a>.
+                </p>
+            </div>
+        </div>
+
+        <h4 class="mt-5 kva-sub-title">Mining Pools</h4>
+        <div class="row">
+            <div class="col-md-12">
+                <p>
+                    We provide a reference implementation of <a href="https://github.com/kevacoin-project/node-cryptonote-pool">Kevacoin mining pool</a> based on
+                    <a href="https://github.com/sammy007/monero-stratum">node-cryptonote-pool</a>.
+                </p>
             </div>
         </div>
 

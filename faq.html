@@ -33,8 +33,7 @@ faqActive: active
 </li>
 <li>
 <p><strong>Where can I get Kevacoin?</strong></p>
-<p>The easiest way to get Kevacoin is through mining. We provide mining software on Linux and Windows, and support both Nvidia and AMD GPUs, as well as CPUs. Check <a href="https://kevacoin.org/mining">https://kevacoin.org/mining</a> for more information.</p>
-<p>The Kevacoin core developers sometimes give away KVA to the community to try the Kevacoin data store. Please note that we do not pre-mine any coins. Since we get the coins through mining too, the give-away depends on how many coins we have.</p>
+<p>The easiest way to get Kevacoin is through mining. Kevacoin uses Cryptonight R hashing algorithm and is compatible with Monero mining software. You can use, for example, XMRig or XMR-Stak as the mining software.</p>
 </li>
 <li>
 <p><strong>What is the maximum supply of Kevacoin?</strong></p>
@@ -68,14 +67,14 @@ faqActive: active
 <p>The maximum key size is 255 bytes, and value size 3072 bytes. The maximum value size is determined by <code>MAX_SCRIPT_ELEMENT_SIZE</code>. It is 520 in Bitcoin and we increase it to 3072. There is no particular reason to choose this size. 520 bytes seems to be too small and too limited. But it cannot be too big either, because we want to avoid potential DoS attacks.</p>
 </li>
 <li>
-<p><strong>Why Cryptonight v8 is chosen as the Proof-of-Work algorithm?</strong></p>
-<p>Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn is Cryptonight V8 (variant 2). Some reasons for this choice:</p>
+<p><strong>Why Cryptonight R is chosen as the Proof-of-Work algorithm?</strong></p>
+<p>Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn is Cryptonight R (variant 4). Some reasons for this choice:</p>
 <ul>
 <li>It seems to generate less heat on GPUs than other alogorihms.</li>
 <li>It is CPU and GPU friendly. CPUs with AES NI instruction can get a better hashrate.</li>
 <li>It may be more ASIC-resistant, so is more fair to individual miners.</li>
 </ul>
-<p>Cryptonight based cryptocurrencies (e.g. monero, bytecoin) have different header structure than Bitcoin/Litecoin. Therefore, the existing Cryptonight miners (e.g. XMRig) are incompatible with Kevacoin. We provide reference implementations for CPU, AMD and Nvidia GPU based on ccminer. The mining software can be found <a href="https://kevacoin.org/mining.html">here</a>.</p>
+<p>Even though Kevacoin is based on Bitcoin/Litecoin, we slightly modified the header structure to make it compatible with Monero mining software. As a result, one can use any Monero mining software to mine Kevacoin (e.g. XMRig or XMR-Stak).</p>
 </li>
 <li>
 <p><strong>What is the difficulty adjustment algorithm?</strong></p>
@@ -106,6 +105,7 @@ faqActive: active
 </ul>
 </li>
 </ol>
+
 
 <!--end of FAQ -->
 </div>
