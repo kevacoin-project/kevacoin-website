@@ -1,3 +1,10 @@
+---
+layout: layout_md.liquid
+permalink: tutorial_solo_mining.html
+title: Open source key-value database on blockchain
+tutorialActive: active
+---
+
 # Solo Mining
 
 Kevacoin can be mined through CPU, AMD and Nvidia GPU. If you want to mine Kevacoin using CPU, it is highly recommended that your CPU supports AES-NI instrcution as the Cryptonight hash algorithm performs much faster using the instruction. Most modern Intel Core <sup>TM</sup> and AMD CPUs support the AES-NI instruction.

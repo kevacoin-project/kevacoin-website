@@ -1,3 +1,10 @@
+---
+layout: layout_md.liquid
+permalink: faq.html
+title: Open source key-value database on blockchain
+faqActive: active
+---
+
 # Frequently Asked Questions
 
 1. **What is Kevacoin?**

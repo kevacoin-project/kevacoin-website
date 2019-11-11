@@ -1,3 +1,10 @@
+---
+layout: layout_md.liquid
+permalink: documentation.html
+title: Open source key-value database on blockchain
+documentationActive: active
+---
+
 # Kevacoin Client/API calls list
 
 ## Key-value related operations
