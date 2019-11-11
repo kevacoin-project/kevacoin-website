@@ -1,14 +1,3 @@
----
-layout: layout.liquid
-permalink: faq.html
-title: Open source key-value database on blockchain
-faqActive: active
----
-<main role="main" class="mt-5 mb-5">
-  <div class="container kva-faq">
-
-<!--start of FAQ -->
-
 <h1>Frequently Asked Questions</h1>
 <ol>
 <li>
@@ -105,8 +94,3 @@ faqActive: active
 </ul>
 </li>
 </ol>
-
-
-<!--end of FAQ -->
-</div>
-</main>
