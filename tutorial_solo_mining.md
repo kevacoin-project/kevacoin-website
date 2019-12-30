@@ -71,6 +71,19 @@ Start the stratum server:
 
 Monero miners (such as XMRig and XMR-Stak) can be used to mine Kevacoin. If the miner configuration file, set the pool url to: `127.0.0.1:19332` (Replace `19332` with the rpcport value you specify in the Kevacoin configuration file `kevacoin.conf`).
 
+The Cryptonight-R hashing algorithm is variant 4 of Cryptonight. In XMRig's `config.json` file, make sure to specify the correct variant:
+
+```
+    "pools": [
+        {
+            "url": "127.0.0.1:3333",
+            ...
+            "variant": 4,
+            ...
+        }
+    ],
+```
+
 
 
 

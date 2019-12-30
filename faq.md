@@ -98,7 +98,7 @@ faqActive: active
     * Download the client software, run and test it.
     * Run a public full node.
     * Be a miner or start a mining pool.
-    * Review or write documentation, including this FAQ. You can submit pull requests to [https://github.com/kevacoin-project/kevacoin-docs](https://github.com/kevacoin-project/kevacoin-docs).
+    * Review or write documentation, including this FAQ. You can submit pull requests to [https://github.com/kevacoin-project/kevacoin-website](https://github.com/kevacoin-project/kevacoin-website).
     * Write unit tests, end-to-end tests and regression tests.
     * Report bugs. To report non-security bugs, use the Github issue tracker. To report security-related bugs, please send emails to [security@kevacoin.org](mailto:security@kevacoin.org).
     * Develop application using the Kevacoin de-centralized data store.
