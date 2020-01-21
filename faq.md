@@ -35,7 +35,7 @@ faqActive: active
 
 3. **What is the maximum supply of Kevacoin?**
 
-    The block reward is 500 KVA initially. The reward is halved about every year (every 1050000 blocks, about 2 minutes for each block). The havling schedule is the same as Bitcoin and Litecoin. The maximum supply of Kevacoin is 1,050,000,000 KVA.
+    The block reward is 500 KVA initially. The reward is halved about every four years (every 1050000 blocks, about 2 minutes for each block). The havling schedule is the same as Bitcoin and Litecoin. The maximum supply of Kevacoin is 1,050,000,000 KVA.
 
 3. **What is the maximum block size?**
 
@@ -105,4 +105,3 @@ faqActive: active
     * Promote the project.
     * Contribute source code to the Kevacoin project. Pull requests are welcomed!
     * Donate to the project.
-
