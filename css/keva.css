@@ -463,3 +463,10 @@ ul li {
   font-size: 1.0rem;
   margin-bottom: 16px;
 }
+
+.kva-note {
+  margin-top: 0;
+  font-size: 1.0rem;
+  position: relative;
+  top: -10px;
+}
