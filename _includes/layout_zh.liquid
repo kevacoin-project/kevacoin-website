@@ -8,7 +8,7 @@
     <meta name="author" content="Kevacoin Core Developers">
     <link rel="icon" href="./images/fav_icon.png">
 
-    <title>Open source key-value database on blockchain</title>
+    <title>{{title}}</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -26,72 +26,34 @@
       <div class="container">
         <a class="navbar-brand" href="index.html">
           <img src="./images/logo.png" width="32" height="32" alt="kevacoin">
-          <span class="kva-logo">Kevacoin</span>
+          <span class="kva-logo">凯华币</span>
         </a>
         <button class="navbar-toggler kva-custom-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse mr-5 pr-5" id="navbarsDefault">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item px-2 active">
-              <a class="nav-link" href="tutorial.html">Tutorial</a>
+            <li class="nav-item px-2 {{tutorialActive}}">
+              <a class="nav-link" href="tutorial.html">教程</a>
             </li>
-            <li class="nav-item px-2 ">
-              <a class="nav-link" href="documentation.html">Documentation</a>
+            <li class="nav-item px-2 {{documentationActive}}">
+              <a class="nav-link" href="documentation.html">文档</a>
             </li>
-            <li class="nav-item px-2 ">
-              <a class="nav-link" href="faq.html">FAQ</a>
+            <li class="nav-item px-2 {{faqActive}}">
+              <a class="nav-link" href="faq.html">常问问题</a>
             </li>
-            <li class="nav-item px-2 ">
-              <a class="nav-link" href="mining.html">Mining</a>
+            <li class="nav-item px-2 {{miningActive}}">
+              <a class="nav-link" href="mining.html">挖矿</a>
             </li>
-            <li class="nav-item px-2 ">
-              <a class="nav-link" href="index_zh.html">中</a>
+            <li class="nav-item px-2 {{miningActive}}">
+              <a class="nav-link" href="index.html">EN</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    
-<main role="main" class="mt-5 px-2">
-  <div class="container">
-
-    <div class="row mb-2">
-      <div class="col-md-12">
-        <h3 class="kva-title">Tutorial</h3>
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-md-12">
-        <p class="kva-tutorial-title">
-          <a href="tutorial_api.html">API/Command line Tutorial</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="row mt-2">
-      <div class="col-md-12">
-        <p class="kva-tutorial-title">
-          <a href="tutorial_solo_mining.html">Solo Mining Tutorial</a>
-        </p>
-      </div>
-    </div>
-
-    <div class="row mt-2">
-      <div class="col-md-12">
-        <p class="kva-tutorial-title">
-          <a href="https://explorer.kevacoin.org/ns/html/NceXtbgQD92zrVM7QUnfNhrRcj2DQ1PewD">How to Publish a Web Page on Keva Blockchain</a>
-          <p class="kva-note">(Hosted on the blockchain!)</p>
-        </p>
-      </div>
-    </div>
-
-  </div> <!-- /container -->
-</main>
-
-
+    {{ content | safe }}
 
     <footer class="kva-footer">
       <div class="container">
@@ -100,23 +62,23 @@
             <img src="./images/logo.png" width="64" height="64" alt="Kevacoin">
           </div>
           <div class="col-6">
-            <p class="kva-footer-title">Community</p>
+            <p class="kva-footer-title">社区</p>
             <div><a href="https://github.com/kevacoin-project/kevacoin" class="kva-footer-link">Github</a></div>
             <div><a href="https://bitcointalk.org/index.php?topic=5213046" class="kva-footer-link">Bitcointalk</a></div>
             <div><a href="https://discord.gg/5zPHhbG" class="kva-footer-link">Discord</a></div>
             <div><a href="https://twitter.com/kevacoin" class="kva-footer-link">Twitter</a></div>
           </div>
           <div class="col-3">
-            <p class="kva-footer-title">Resources</p>
-            <div><a href="https://explorer.kevacoin.org" class="kva-footer-link">Block Explorer</a></div>
+            <p class="kva-footer-title">资源</p>
+            <div><a href="https://explorer.kevacoin.org" class="kva-footer-link">区块浏览器</a></div>
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-lg-12">
-            <p class="kva-license">&copy; Kevacoin Project 2018-2020 Released under the MIT license</p>
+            <p class="kva-license">&copy; Kevacoin Project 2018-2020在MIT许可下发布</p>
           </div>
         </div>
-        <div class="row" >
+        <div class="row" {{hide_change}}>
           <div class="col-lg-12">
             <p class="kva-pr-p">Want to improve this page? Submit a <a class="kva-pr-a" href="https://github.com/kevacoin-project/kevacoin-website">PR</a></p>
           </div>
