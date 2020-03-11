@@ -141,11 +141,12 @@ ul li {
 }
 
 .kva-ann {
-  color: darkgreen;
-  background-color: rgb(243, 246, 251);
+  color: rgb(243, 246, 251);
+  background-color: rgb(177, 51, 5);
   padding: 5px;
   text-align: center;
   font-size: 1.0rem;
+  font-weight: 700;
 }
 
 .kva-header {
