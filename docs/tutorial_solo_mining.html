@@ -112,13 +112,12 @@ VFgAsW4SP7GtMwb4Uvf9Z6nZ4j8qWbs5fV
 ./keva-stratum config.json
 </pre>
 <h2>Run the miner</h2>
-<p>Monero miners (such as XMRig and XMR-Stak) can be used to mine Kevacoin. If the miner configuration file, set the pool url to: <code>127.0.0.1:19332</code> (Replace <code>19332</code> with the rpcport value you specify in the Kevacoin configuration file <code>kevacoin.conf</code>).</p>
-<p>The Cryptonight-R hashing algorithm is variant 4 of Cryptonight. In XMRig's <code>config.json</code> file, make sure to specify the correct variant:</p>
+<p>Monero miners (such as XMRig and XMRigCC) can be used to mine Kevacoin. If the miner configuration file, set the pool url to: <code>127.0.0.1:19332</code> (Replace <code>19332</code> with the rpcport value you specify in the Kevacoin configuration file <code>kevacoin.conf</code>).</p>
+<p>The <code>algo</code> and <code>coin</code> fields in XMRig's <code>config.json</code> file should be <code>null</code> as keva-stratum will set the correct algorithm for the miner.</p>
 <pre><code>    &quot;pools&quot;: [
         {
-            &quot;url&quot;: &quot;127.0.0.1:3333&quot;,
-            ...
-            &quot;variant&quot;: 4,
+            &quot;algo&quot;: null,
+            &quot;coin&quot;: null,
             ...
         }
     ],
