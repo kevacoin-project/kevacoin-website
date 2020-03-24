@@ -13,15 +13,15 @@ Kevacoin can be mined through CPU, AMD and Nvidia GPU. If you want to mine Kevac
 
 You need to run the following programs in order to do solo-mining:
 
-1. Kevacoin client.
+1. Kevacoin wallet.
 2. [Keva-stratum](https://github.com/kevacoin-project/keva-stratum) solo-mining stratum.
-3. One of the miners (XMRig, XMR-Stak etc.).
+3. One of the miners (latest release of XMRig, XMRigCC etc.).
 
-## Setup and run Kevacoin client
+## Setup and run Kevacoin wallet
 
-Download the Kevacoin client from [https://kevacoin.org](https://kevacoin.org), choose the specific client for your platform. Alternatively, you can also build the client from the source (<https://github.com/kevacoin-project/kevacoin>). When building from the source, make sure to use the current release tag.
+Download the Kevacoin wallet from [https://kevacoin.org](https://kevacoin.org), choose the specific wallet for your platform. Alternatively, you can also build the wallet from the source (<https://github.com/kevacoin-project/kevacoin>). When building from the source, make sure to use the current release tag.
 
-Before running the client, add a file `kevacoin.conf` to the Kevacoin data directory with the following content:
+Before running the wallet, add a file `kevacoin.conf` to the Kevacoin data directory with the following content:
 
 <pre>
 rpcuser=yourusername
@@ -39,10 +39,16 @@ The table below lists the Kevacoin data directory for different platforms.
 |Windows    | C:\Users\YourUserName\Appdata\Roaming\Kevacoin |
 |macOS      | ~/Library/Application Support/Kevacoin |
 
-Once the `kevacoin.conf` file is added, start the Kevacoin client:
+Once the `kevacoin.conf` file is added, start the Kevacoin wallet:
 
 <pre>
 kevacoind
+</pre>
+
+Or the GUI application:
+
+<pre>
+kevacoin-qt
 </pre>
 
 If you don't have a Kevacoin address yet, generate a new one:

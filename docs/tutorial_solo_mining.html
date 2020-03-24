@@ -57,13 +57,13 @@
 <h2>Overview</h2>
 <p>You need to run the following programs in order to do solo-mining:</p>
 <ol>
-<li>Kevacoin client.</li>
+<li>Kevacoin wallet.</li>
 <li><a href="https://github.com/kevacoin-project/keva-stratum">Keva-stratum</a> solo-mining stratum.</li>
-<li>One of the miners (XMRig, XMR-Stak etc.).</li>
+<li>One of the miners (latest release of XMRig, XMRigCC etc.).</li>
 </ol>
-<h2>Setup and run Kevacoin client</h2>
-<p>Download the Kevacoin client from <a href="https://kevacoin.org">https://kevacoin.org</a>, choose the specific client for your platform. Alternatively, you can also build the client from the source (<a href="https://github.com/kevacoin-project/kevacoin">https://github.com/kevacoin-project/kevacoin</a>). When building from the source, make sure to use the current release tag.</p>
-<p>Before running the client, add a file <code>kevacoin.conf</code> to the Kevacoin data directory with the following content:</p>
+<h2>Setup and run Kevacoin wallet</h2>
+<p>Download the Kevacoin wallet from <a href="https://kevacoin.org">https://kevacoin.org</a>, choose the specific wallet for your platform. Alternatively, you can also build the wallet from the source (<a href="https://github.com/kevacoin-project/kevacoin">https://github.com/kevacoin-project/kevacoin</a>). When building from the source, make sure to use the current release tag.</p>
+<p>Before running the wallet, add a file <code>kevacoin.conf</code> to the Kevacoin data directory with the following content:</p>
 <pre>
 rpcuser=yourusername
 rpcpassword=yourpassowrd
@@ -93,9 +93,13 @@ rpcport=19332
 </tr>
 </tbody>
 </table>
-<p>Once the <code>kevacoin.conf</code> file is added, start the Kevacoin client:</p>
+<p>Once the <code>kevacoin.conf</code> file is added, start the Kevacoin wallet:</p>
 <pre>
 kevacoind
+</pre>
+<p>Or the GUI application:</p>
+<pre>
+kevacoin-qt
 </pre>
 <p>If you don't have a Kevacoin address yet, generate a new one:</p>
 <pre>
