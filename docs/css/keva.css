@@ -141,8 +141,8 @@ ul li {
 }
 
 .kva-ann {
-  color: rgb(243, 246, 251);
-  background-color: rgb(177, 51, 5);
+  color: darkgreen;
+  background-color: rgb(243, 246, 251);
   padding: 5px;
   text-align: center;
   font-size: 1.0rem;
