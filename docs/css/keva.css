@@ -266,6 +266,14 @@ ul li {
   box-shadow: 0 0 50px 0 rgba(22, 104, 183, 0.15);
 }
 
+.kva-download-android {
+  text-align: center;
+  background-color: transparent;
+  min-width: 280px;
+  margin: 15px;
+  padding: 0;
+}
+
 @media (min-width: 576px) {
   .kva-download {
     min-width: 300px;
