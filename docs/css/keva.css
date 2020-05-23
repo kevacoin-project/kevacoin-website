@@ -479,3 +479,11 @@ ul li {
   position: relative;
   top: -10px;
 }
+
+.kva-blog-list-title {
+  margin-bottom: 0 !important;
+}
+
+.kva-blog-list-date {
+  font-size: 0.9rem;
+}
