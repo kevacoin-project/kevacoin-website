@@ -19,7 +19,7 @@ a:hover {
 }
 
 p {
-  color:rgb(90, 102, 113);
+  color:rgba(0, 0, 0, 0.80);
   font-size: 1.1rem;
   line-height: 32px;
 }
@@ -115,9 +115,10 @@ ul li {
 }
 
 .kva-logo {
-  font-family: "Dosis";
+  font-family: "Exo";
   color: #B1325D;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-style: italic;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   position: relative;
@@ -337,6 +338,12 @@ ul li {
   margin-bottom: 0px;
 }
 
+.kva-license-attr {
+  color:#aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0px;
+}
+
 .kva-pr-p {
   font-size: 0.8rem;
 }
@@ -480,10 +487,15 @@ ul li {
   top: -10px;
 }
 
+.kva-blog-title {
+  margin-bottom: 0 !important;
+}
+
 .kva-blog-list-title {
   margin-bottom: 0 !important;
 }
 
 .kva-blog-list-date {
   font-size: 0.9rem;
+  color:rgba(0, 0, 0, 0.5);
 }

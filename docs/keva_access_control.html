@@ -8,7 +8,7 @@
     <meta name="author" content="Kevacoin Core Developers">
     <link rel="icon" href="./images/fav_icon.png">
 
-    <title>Open source key-value database on blockchain</title>
+    <title>The Next Big Step</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -34,7 +34,7 @@
         </button>
         <div class="collapse navbar-collapse mr-5 pr-5" id="navbarsDefault">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item px-2 active">
+            <li class="nav-item px-2 ">
               <a class="nav-link" href="tutorial.html">Tutorial</a>
             </li>
             <li class="nav-item px-2 ">
@@ -46,7 +46,7 @@
             <li class="nav-item px-2 ">
               <a class="nav-link" href="mining.html">Mining</a>
             </li>
-            <li class="nav-item px-2 ">
+            <li class="nav-item px-2 active">
               <a class="nav-link" href="blog.html">Blog</a>
             </li>
           </ul>
@@ -56,80 +56,17 @@
 
     <main role="main" class="mt-5 mb-5">
       <div class="container kva-documentation">
-    <h1>Solo Mining</h1>
-<p>Kevacoin can be mined through CPU, AMD and Nvidia GPU. If you want to mine Kevacoin using CPU, it is highly recommended that your CPU supports AES-NI instrcution as the Cryptonight hash algorithm performs much faster using the instruction. Most modern Intel Core <sup>TM</sup> and AMD CPUs support the AES-NI instruction.</p>
-<h2>Overview</h2>
-<p>You need to run the following programs in order to do solo-mining:</p>
-<ol>
-<li>Kevacoin wallet.</li>
-<li><a href="https://github.com/kevacoin-project/keva-stratum">Keva-stratum</a> solo-mining stratum.</li>
-<li>One of the miners (latest release of XMRig, XMRigCC etc.).</li>
-</ol>
-<h2>Setup and run Kevacoin wallet</h2>
-<p>Download the Kevacoin wallet from <a href="https://kevacoin.org">https://kevacoin.org</a>, choose the specific wallet for your platform. Alternatively, you can also build the wallet from the source (<a href="https://github.com/kevacoin-project/kevacoin">https://github.com/kevacoin-project/kevacoin</a>). When building from the source, make sure to use the current release tag.</p>
-<p>Before running the wallet, add a file <code>kevacoin.conf</code> to the Kevacoin data directory with the following content:</p>
-<pre>
-rpcuser=yourusername
-rpcpassword=yourpassowrd
-rpcport=19332
-</pre>
-<p>Make sure to replace <code>yourusername</code> and <code>yourpassword</code> with your own user name and secure password.</p>
-<p>The table below lists the Kevacoin data directory for different platforms.</p>
-<table>
-<thead>
-<tr>
-<th>OS</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Linux</td>
-<td>~/.kevacoin</td>
-</tr>
-<tr>
-<td>Windows</td>
-<td>C:\Users\YourUserName\Appdata\Roaming\Kevacoin</td>
-</tr>
-<tr>
-<td>macOS</td>
-<td>~/Library/Application Support/Kevacoin</td>
-</tr>
-</tbody>
-</table>
-<p>Once the <code>kevacoin.conf</code> file is added, start the Kevacoin wallet:</p>
-<pre>
-kevacoind
-</pre>
-<p>Or the GUI application:</p>
-<pre>
-kevacoin-qt
-</pre>
-<p>If you don't have a Kevacoin address yet, generate a new one:</p>
-<pre>
-kevacoin-cli getnewaddress
-
-VFgAsW4SP7GtMwb4Uvf9Z6nZ4j8qWbs5fV
-</pre>
-<p>Kevacoin address always starts with a prefix 'V'.</p>
-<h2>Setup and run Keva-stratum</h2>
-<p>Download and build the keva-stratum from source code: <a href="https://github.com/kevacoin-project/keva-stratum">https://github.com/kevacoin-project/keva-stratum</a>. If you are running on Windows, we provide a <a href="https://github.com/kevacoin-project/keva-stratum/releases">pre-built binary</a>.</p>
-<p>Keva-stratum requires a simple configuration file. Refer to the section <a href="https://github.com/kevacoin-project/keva-stratum#running-stratum">Running Stratum</a> on how to configure the file.</p>
-<p>Start the stratum server:</p>
-<pre>
-./keva-stratum config.json
-</pre>
-<h2>Run the miner</h2>
-<p>Monero miners (such as XMRig and XMRigCC) can be used to mine Kevacoin. If the miner configuration file, set the pool url to: <code>127.0.0.1:19332</code> (Replace <code>19332</code> with the rpcport value you specify in the Kevacoin configuration file <code>kevacoin.conf</code>).</p>
-<p>The <code>algo</code> and <code>coin</code> fields in XMRig's <code>config.json</code> file should be <code>null</code> as keva-stratum will set the correct algorithm for the miner.</p>
-<pre><code>    &quot;pools&quot;: [
-        {
-            &quot;algo&quot;: null,
-            &quot;coin&quot;: null,
-            ...
-        }
-    ],
-</code></pre>
+    <h1 class="kva-blog-title">The Next Big Step</h1>
+<p class="kva-blog-list-date">May 21 2020</p>
+<img src="images/utah-95032_1920.jpg" class="img-fluid" alt="Bike Jump" style="margin-bottom: 30px"/>
+<p>Kevacoin key-value database is very easy to use. If you are a developer and have played with key-value databases like Redis, etcd or Amazon DynamoDB, you will be right at home. All you need to do is download and install the wallet, sync with the network, get couple Kevacoin, and you are ready to write to the database using some simple commands or the desktop wallet GUI.</p>
+<p>Remember that you are writing to the global database, how can you be sure that the key you are going to insert in the database has not been used by other people? Kevacoin solves this issue by introducing the concept of namespace. First you create a namespace, which has a network unique ID, then you can insert whatever key-value pairs in this namespace without conflict with other people’s data.</p>
+<img src="images/namespaces.png" class="img-fluid" alt="namespace" style="margin-bottom: 20px"/>
+<p>You start to publish your wiki project on the blockchain with all the content stored in your own namespace. The wiki reaches everywhere in the world, and it gets very popular quickly. Many readers want to contribute to the project by adding or editing content. Now you have a problem, you are the only one who can write to the namespace because you created it with your private key and it cannot be cryptographically tampered with by other people. This is great for security but really inconvenient for programming. It means users have to write in their own namespaces and it is hard to bring all these namespaces into a coherent structure. It is hard for them to cooperate in the project.</p>
+<p>What if you can give other users the right to write in your namespace? That is a much better improvement! But what if they misbehave? We believe you want to revoke their right in this case.  How about they are so good and reliable that you want to delegate more responsibility to them? That should be supported too. We call this capability “Access Control”. It may sound boring but it opens the door for many more opportunities and makes Kevacoin much easier to use and more flexible for different use cases. With this important feature, Kevacoin will be ready for much greater adoption.</p>
+<p>This is what we are going to implement in Kevacoin in the coming months. We will start with a Kevacoin Improvement Proposal (KIP) for the community to review. This may require a protocol upgrade but if handled carefully, it could be a soft fork so that users can gradually upgrade their wallets. In any case, it should be easier than the hash algorithm change that happened less than a couple months ago.</p>
+<hr>
+<p>Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=95032">David Mark</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=95032">Pixabay</a></p>
 
       </div>
     </main>

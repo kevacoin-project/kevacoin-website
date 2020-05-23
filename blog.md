@@ -10,10 +10,7 @@ pagination:
   alias: posts
 ---
 
-# About this blog
-
-This is my special place on the big World Wide Web
-
+# Blog Posts
 
 {% for post in posts %}
   <article>
