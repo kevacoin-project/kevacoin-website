@@ -119,10 +119,11 @@ ul li {
   color: #B1325D;
   font-size: 1.2rem;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   position: relative;
   top: 3px;
+  letter-spacing: 0.05rem;
 }
 
 .kva-bg {
