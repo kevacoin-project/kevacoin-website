@@ -75,7 +75,7 @@ ul li {
 }
 
 .nav-link {
-  color: rgb(90, 102, 113) !important;
+  color: rgb(75, 87, 98) !important;
   margin-bottom: 0;
   font-size: 18px;
   font-family: "Dosis", sans-serif;
@@ -117,7 +117,7 @@ ul li {
 .kva-logo {
   font-family: "Exo";
   color: #B1325D;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-style: italic;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
