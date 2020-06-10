@@ -7,7 +7,7 @@ miningActive: active
 
 # Mining
 
-Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn is Cryptonight R (variant 4) before block 46130 and switch to Random/Keva (a variant of RandomX) after that. The latest Cryptonight miners (e.g. XMRig, XMRigCC) are compatible with Kevacoin, as long as they support Cryptonight R and Random/Keva.
+Kevacoin uses Proof-of-Work as its consensus method. The hashing algorithmn was Cryptonight R (variant 4) before block 46130 and switched to Random/Keva (a variant of RandomX) after that. The latest Cryptonight miners (e.g. XMRig, XMRigCC) are compatible with Kevacoin, as long as they support Cryptonight R and Random/Keva.
 
 ## Solo Mining
 
