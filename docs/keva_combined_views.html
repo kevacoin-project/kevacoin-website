@@ -8,7 +8,7 @@
     <meta name="author" content="Kevacoin Core Developers">
     <link rel="icon" href="./images/fav_icon.png">
 
-    <title>The Next Big Step</title>
+    <title>View Differently</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -56,21 +56,25 @@
 
     <main role="main" class="mt-5 mb-5">
       <div class="container kva-documentation">
-    <h1 class="kva-blog-title">The Next Big Step</h1>
-<p class="kva-blog-list-date">May 21 2020</p>
-<img src="images/utah-95032_1920.jpg" class="img-fluid" alt="Bike Jump" style="margin-bottom: 30px"/>
+    <h1 class="kva-blog-title">View Differently</h1>
+<p class="kva-blog-list-date">June 09 2020</p>
+<img src="images/boating-1259608_1920.jpg" class="img-fluid" alt="Boating Extreme Sport" style="margin-bottom: 30px"/>
+<p>In our previous blog, <a href="./keva_access_control.html">The Next Big Step</a>, we discussed the main limitation of the current implementation of Keva database. That is, we use the namespace to avoid conflicts of keys, so that users can insert whatever keys they like to the database. Think of a namespace as a bucket, you can do whatever you want in your own bucket, but you cannot touch other peoples’ buckets.</p>
+<p>This is great, but how can different users collaborate on a project? For example, in a decentralized wiki project, how can different people work on the same wiki document? And in a decentralized “Twitter”, how do we represent the relationship of following and being followed, when they are technically isolated in their own namespaces?</p>
+<img src="images/ns.png" class="img-fluid" alt="namespace" style="margin-bottom: 20px"/>
+<p>The access control project in the previous blog is a possible solution, but it is quite complex to implement and very risky as it needs to make non-trivial changes to the consensus layer. And it is not flexible at all - people need to manually manage the access control.</p>
+<p>It turns out there is a much easier solution than access control.</p>
 <blockquote>
-<p>Update (June 10, 2020): we have a better solution to this problem, see <a href="./keva_combined_views.html">&quot;View Differently&quot;</a></p>
+<p>Change How We View Things!</p>
 </blockquote>
-<p>Kevacoin key-value database is very easy to use. If you are a developer and have played with key-value databases like Redis, etcd or Amazon DynamoDB, you will be right at home. All you need to do is download and install the wallet, sync with the network, get couple Kevacoin, and you are ready to write to the database using some <a href="./tutorial_api.html">simple commands</a> or the desktop wallet GUI.</p>
-<p>Remember that you are writing to the global database, how can you be sure that the key you are going to insert in the database has not been used by other people? Kevacoin solves this issue by introducing the concept of namespace. First you create a namespace, which has a network unique ID, then you can insert whatever key-value pairs in this namespace without conflict with other people’s data.</p>
-<img src="images/namespaces.png" class="img-fluid" alt="namespace" style="margin-bottom: 20px"/>
-<p>You start to publish your wiki project on the blockchain with all the content stored in your own namespace. The wiki reaches everywhere in the world, and it gets very popular quickly. Many readers want to contribute to the project by adding or editing content. Now you have a problem, you are the only one who can write to the namespace because you created it with your private key and it cannot be cryptographically tampered with by other people. This is great for security but really inconvenient for programming. It means users have to write in their own namespaces and it is hard to bring all these namespaces into a coherent structure. It is hard for them to cooperate in the project.</p>
-<p>What if you can give other users the right to write in your namespace? That is a much better improvement! But what if they misbehave? We believe you want to revoke their right in this case.  How about they are so good and reliable that you want to delegate more responsibility to them? That should be supported too. We call this capability “Access Control”. It may sound boring but it opens the door for many more opportunities and makes Kevacoin much easier to use and more flexible for different use cases. With this important feature, Kevacoin will be ready for much greater adoption.</p>
-<p>This is what we are going to implement in Kevacoin in the coming months. We will start with a Kevacoin Improvement Proposal (KIP) for the community to review. This may require a protocol upgrade but if handled carefully, it could be a soft fork so that users can gradually upgrade their wallets. In any case, it should be easier than the hash algorithm change that happened less than a couple months ago.</p>
+<p>Back to the wiki example, Alice, Bob and Charlie are working on the same wiki document. They are making the changes on the different or same parts of the documents. They can only work in their own namespaces, which we know is a problem. The &quot;Access Control&quot; feature will allow Alice to write in Bob's namespace and vice versa, but it is a complex feature to implement and is not flexible. Now, what if the Keva database allows them to view the combined result and resolve the difference, as shown in the Venn graph below? If Alice and Bob make changes on different parts, e.g. A and B in the graph, the database simply shows the content of A and B. However, they also make changes on the same part, e.g. AB in the graph. In this case, we can use a simple rule that the changes in the later block will override the changes in the early block.</p>
+<img src="images/venn_graph.png" class="img-fluid" alt="namespace" style="margin-bottom: 20px"/>
+<p>For example, in block 1200, Alice sets the value of key “the greatest scientists” to “Marie Curie and Plato”, while in block 1201, Bob sets the value of the same key to “Issac Newton and Picasso”. In the combined view, the value will be shown as “Issac Newton and Picasso” as this change comes later. As the convention of the wiki project, Alice and Bob discuss and reach a consensus. In Block 1202, Alice changes it to “Marie Curie and Issac Newton” in her namespace, which will be shown in the latest view.</p>
+<p>What is more interesting is that if you don’t like Alice and Bob’s version, you are free to choose Charlie and Daisy’s! The Keva database will give you the full flexibility of what to view. We feel that this reflects the true spirit of a decentralized web.</p>
+<p>There will be no consensus layer change to implement this feature. All we need to do is to allow the database to combine multiple namespaces into one view without actually changing any of them. This will make it easy for people to colloborate on the decentralized database, and it is much easier and less risky to implement than access control. We are excited to make this feature available soon!</p>
 <hr>
 <p class="kva-license-attr">
-Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=95032">David Mark</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=95032">Pixabay</a>
+Image by Image by <a href="https://pixabay.com/users/vsalgado23-2226024/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1259608">valeska salgado</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1259608">Pixabay</a>
 </p>
 
       </div>

@@ -30,6 +30,47 @@ ul li {
   margin-bottom: 10px;
 }
 
+blockquote{
+  font-size: 1.4em;
+  width:90%;
+  margin:20px auto;
+  font-family:Open Sans;
+  font-style:italic;
+  color: #555555;
+  padding:0.3em 30px 0.3em 75px;
+  border-left:8px solid #78C0A8 ;
+  line-height:1.6;
+  position: relative;
+  background:#EDEDED;
+}
+
+blockquote p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+blockquote::before{
+  font-family:Arial;
+  content: "";
+  color:#78C0A8;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-20px;
+}
+
+blockquote::after{
+  content: '';
+}
+
+blockquote span{
+  display:block;
+  color:#333333;
+  font-style: normal;
+  font-weight: bold;
+  margin-top:1em;
+}
+
 .jumbotron {
   position: relative;
   background-image: url('../images/keva_background_sm.jpg');
@@ -274,6 +315,10 @@ ul li {
   min-width: 280px;
   margin: 15px;
   padding: 0;
+}
+
+.kva-store {
+  min-height: 82px;
 }
 
 @media (min-width: 576px) {
