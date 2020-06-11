@@ -167,6 +167,18 @@ blockquote span{
   letter-spacing: 0.05rem;
 }
 
+.kva-logo-b {
+  font-family: 'Exo 2', sans-serif;
+  color: #404040;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  top: 3px;
+  letter-spacing: 0.05rem;
+}
+
 .kva-bg {
   background-color: #fff;
   -moz-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
