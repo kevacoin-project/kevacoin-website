@@ -8,7 +8,7 @@
     <meta name="author" content="Kevacoin Core Developers">
     <link rel="icon" href="./images/fav_icon.png">
 
-    <title>Open source key-value database on blockchain</title>
+    <title>Keva and IPFS on Mobile Devices</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -56,39 +56,35 @@
 
     <main role="main" class="mt-5 mb-5">
       <div class="container kva-documentation">
-    <h1>Blog Posts</h1>
-<img src="images/desktop-2325627_1920.jpg" class="img-fluid" alt="Bike Jump" style="margin-bottom: 0px"/>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./ipfs_mobile.html">Keva and IPFS on Mobile Devices</a>
-    </h2>
-    <p class="kva-blog-list-date">September 24 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_electrumx.html">Decentralized Server for Kevacoin</a>
-    </h2>
-    <p class="kva-blog-list-date">August 23 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_combined_views.html">View Differently</a>
-    </h2>
-    <p class="kva-blog-list-date">June 09 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_access_control.html">The Next Big Step</a>
-    </h2>
-    <p class="kva-blog-list-date">May 21 2020</p>
-  </article>
-<h2><br>
-<br>
-<br>
-<br></h2>
-<p class="kva-license-attr">
-Image by <a href="https://pixabay.com/users/theglassdesk-149631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2325627">Becca Clark</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2325627">Pixabay</a>
-</p>
+    <h1 class="kva-blog-title">Keva and IPFS on Mobile Devices</h1>
+<p class="kva-blog-list-date">September 24 2020</p>
+<img src="images/boat-3622293_1920.jpg" class="img-fluid" alt="Boating Extreme Sport" style="margin-bottom: 30px"/>
+<h2>Blockchain on Your Mobile Device</h2>
+<p>By now, our iOS and Android mobile apps support reading and writing to the Keva blockchain. It is never so easy to publish your blogs on the blockchain and available everywhere in the world. Your readers can comment and share your blogs, and reward you with Kevacoin, also on the Keva blockchain! Download it from iOS App Store and Google Play Store and give it a try! Take a look at our official blog using the short code (5570511). It is always free to read articles. If you need some Kevacoins to publish your blog (only a tiny amount is needed), feel free to send us a Twitter direct message @kevacoin, and we will be glad to share some Kevacoins with you.</p>
+<h2>Support for IPFS</h2>
+<p>You can write your blogs in plain text or HTML, and you can insert pictures and videos. However, the pictures and the videos must be hosted on a server somewhere, and you have to insert the HTTP links. It is not an ideal decentralized solution and we are working on a solution that will allow you to upload your pictures and videos to IPFS from your mobile device. Integrating IPFS in a mobile app is an interesting challenge. The major problem is that mobile apps cannot have constant network connection (otherwise the battery will quickly drain), and reliable network connection (WIFI vs cellular data). Because of this, after you upload an image or video to IPFS, other people may not be able to access the file if your mobile app is not connected to the internet. Running an IPFS peer on a mobile device will also have performance issues. An IPFS peer opens many connections to other peers and requires large network bandwidth and CPU cycles, which may not be suitable for a mobile device.</p>
+<h2>Our Proposal</h2>
+<p>Keva mobile wallet needs to connect to a server to check balance, perform transactions, and access the blockchain database. However, the server (<a href="https://kevacoin.org/keva_electrumx.html">ElectrumX server</a>) is fundamentally different from the centralized servers we are familiar with. Kevacoin mobile wallet's server is a decentralized one, which means anyone can set up, run and connect to a server. The server supports peer-to-peer discovery and can form a peer-to-peer network. You can choose which server to connect to on the mobile app.</p>
+<p>Our proposal is to integrate IPFS peers with the ElectrumX server. This is how it works:</p>
+<ul>
+<li>We (or anyone else) run an IPFS peer alongside the ElectrumX server.</li>
+<li>You upload the picture or video to the IPFS peer through an HTTP API. The media has a unique IPFS CID (content ID).</li>
+<li>You add the CID in your post, and the mobile App creates a Kevacoin transaction with your post and the CID, as well as a special IPFS hosting(pinning fee) to a Kevacoin address of the server.</li>
+<li>The server listens to the address. Once it receives the payment, it will pin the media with the given CID.</li>
+<li>The pinning fee is solely determined by whoever runs the server. It may depend on the size of the media and the duration of pinning.</li>
+</ul>
+<img src="images/ipfs_elec.png" class="img-fluid" alt="Boating Extreme Sport" style="margin-bottom: 30px"/>
+<p>This proposal has several important advantages:</p>
+<ul>
+<li>It is still a decentralized solution, as the ElectrumX servers form decentralized peer-to-peer networks.</li>
+<li>It provides a financial incentive to run the ElectrumX server. Before this, running an ElectrumX server is a pure voluntary action.</li>
+<li>It does not require an IPFS node on the mobile device, so it is lightweight, fast and reliable.</li>
+</ul>
+<p>More importantly, the IPFS transaction is public on the blockchain and can be easily audited by anyone. One can check if a media is properly pinned by a server after it receives the payment. This is a reputation system that will encourage server owners to provide reliable services.</p>
+<p>This solution should not be difficult to implement. The mobile app will need some changes to process and upload images and videos to the server through HTTP API, and includes a payment to the server when creating a transaction for a posting. We need to add some logic on the server side to listen to the payment event and pin the uploaded media once the payment is received. We are working on system design and hope to bring this new feature to you soon!</p>
+<hr>
+<p>Image by <a href="https://pixabay.com/users/Engin_Akyurt-3656355/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3622293">Engin Akyurt</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3622293">Pixabay</a></p>
+
       </div>
     </main>
 
