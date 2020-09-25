@@ -15,7 +15,7 @@ tags: ['post']
 
 ## Blockchain on Your Mobile Device
 
-By now, our iOS and Android mobile apps support reading and writing to the Keva blockchain. It is never so easy to publish your blogs on the blockchain and available everywhere in the world. Your readers can comment and share your blogs, and reward you with Kevacoin, also on the Keva blockchain! Download it from iOS App Store and Google Play Store and give it a try! Take a look at our official blog using the short code (5570511). It is always free to read articles. If you need some Kevacoins to publish your blog (only a tiny amount is needed), feel free to send us a Twitter direct message @kevacoin, and we will be glad to share some Kevacoins with you.
+By now, our iOS and Android mobile apps support reading and writing to the Keva blockchain. It is never so easy to publish your blogs on the blockchain and available everywhere in the world. Your readers can comment and share your blogs, and reward you with Kevacoin, also on the Keva blockchain! Download it from iOS App Store and Google Play Store and give it a try! Take a look at our official blog using the short code (5570511). It is always free to read articles. If you need some Kevacoins to publish your blog (only a tiny amount is needed), feel free to send us a Twitter direct message [@kevacoin](https://twitter.com/kevacoin), and we will be glad to share some Kevacoins with you.
 
 ## Support for IPFS
 
