@@ -7,6 +7,37 @@ documentationActive: active
 
 # Kevacoin Client/API calls list
 
+Kevacoin is derived from Bitcoin and it shares many common commands and APIs. Kevacoin has a new set of APIs/Commands for key-value related operations, which are documented here. For other APIs/Commands, please refer to [Bitcoin's RPC API Reference](https://developer.bitcoin.org/reference/rpc/index.html).
+
+---
+**NOTE**
+
+The following "account" related wallet commands are deprecated and will be removed in the future releases:
+
+```
+getaccount
+getaccountaddress
+getaddressesbyaccount
+getreceivedbyaccount
+listaccounts
+listreceivedbyaccount
+move
+setaccount
+```
+
+Instead, use `getnewaddress` to get a new address:
+
+```
+kevacoin-cli getnewaddress
+```
+
+Use `sendtoaddress` to send an amount to a given address:
+```
+kevacoin-cli sendtoaddress VTRMKQcFgd4LQyoBT28GNBrt9f6AaEUVJn 0.1
+```
+
+---
+
 ## Key-value related operations
 
 ## **keva_namespace**

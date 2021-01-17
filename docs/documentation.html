@@ -57,6 +57,26 @@
     <main role="main" class="mt-5 mb-5">
       <div class="container kva-documentation">
     <h1>Kevacoin Client/API calls list</h1>
+<p>Kevacoin is derived from Bitcoin and it shares many common commands and APIs. Kevacoin has a new set of APIs/Commands for key-value related operations, which are documented here. For other APIs/Commands, please refer to <a href="https://developer.bitcoin.org/reference/rpc/index.html">Bitcoin's RPC API Reference</a>.</p>
+<hr>
+<p><strong>NOTE</strong></p>
+<p>The following &quot;account&quot; related wallet commands are deprecated and will be removed in the future releases:</p>
+<pre><code>getaccount
+getaccountaddress
+getaddressesbyaccount
+getreceivedbyaccount
+listaccounts
+listreceivedbyaccount
+move
+setaccount
+</code></pre>
+<p>Instead, use <code>getnewaddress</code> to get a new address:</p>
+<pre><code>kevacoin-cli getnewaddress
+</code></pre>
+<p>Use <code>sendtoaddress</code> to send an amount to a given address:</p>
+<pre><code>kevacoin-cli sendtoaddress VTRMKQcFgd4LQyoBT28GNBrt9f6AaEUVJn 0.1
+</code></pre>
+<hr>
 <h2>Key-value related operations</h2>
 <h2><strong>keva_namespace</strong></h2>
 <p>Create a namepsace with the given display name.</p>
