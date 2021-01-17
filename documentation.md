@@ -80,6 +80,8 @@ Insert or update a key value pair in the given namespace.
 
 3. `<value>`: &nbsp; (string, &nbsp; required) &nbsp;  The value, with maximum size 3072 bytes.
 
+4. `<address>`: &nbsp; (string, &nbsp; optional) &nbsp;  (**Version 0.16.7.0 or above**) Transfer the namespace to the given address. Use the option to transfer the namespace to a different wallet (warning: you will no longer be able to update the namespace if it is in a different wallet).
+
 **Results**
 
 The transaction id of this operation.
@@ -223,4 +225,3 @@ kevacoin-cli keva_filter NfjHmcWxHndbfMRG7FeXWtmBEaRp896wBC "first*"
   }
 ]
 </pre>
-
