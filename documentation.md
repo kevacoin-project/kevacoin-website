@@ -9,6 +9,12 @@ documentationActive: active
 
 Kevacoin is derived from Bitcoin and it shares many common commands and APIs. Kevacoin has a new set of APIs/Commands for key-value related operations, which are documented here. For other APIs/Commands, please refer to [Bitcoin's RPC API Reference](https://developer.bitcoin.org/reference/rpc/index.html).
 
+To list all commands, or get help for specific Kevacoin command:
+```
+kevacoin-cli help
+kevacoin-cli help getnewaddress
+```
+
 ---
 **NOTE**
 
