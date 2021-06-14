@@ -12,11 +12,11 @@ mkdir ~/kevacoin
 
 cd ~/kevacoin
 
-wget https://github.com/kevacoin-project/kevacoin/releases/download/v0.16.6.0/kevacoin-0.16.6.0.tar.gz
+wget https://github.com/kevacoin-project/kevacoin/releases/download/v0.16.8.0/kevacoin-0.16.8.0.tar.gz
 
-tar xvf kevacoin-0.16.6.0.tar.gz
+tar xvf kevacoin-0.16.8.0.tar.gz
 
-cd kevacoin-0.16.6.0
+cd kevacoin-0.16.8.0
 
 echo "txindex=1" > ~/.kevacoin/kevacoin.conf
 
@@ -45,6 +45,8 @@ python3.7 -m pip install pylru
 python3.7 -m pip install plyvel
 
 python3.7 -m pip install aiorpcx
+
+python3.7 -m pip install websockets
 
 sudo apt install python3.7-dev
 
