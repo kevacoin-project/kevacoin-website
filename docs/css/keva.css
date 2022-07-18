@@ -406,6 +406,7 @@ blockquote span{
   font-size: 0.8rem;
 }
 
+/* unused
 .kva-pr-a {
   font-size: 0.8rem;
   color:#aaa;
@@ -418,6 +419,7 @@ blockquote span{
   text-decoration:none;
   cursor:pointer;
 }
+*/
 
 .kva-section-summary {
   font-family: "Dosis", sans-serif;
