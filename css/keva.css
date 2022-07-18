@@ -24,6 +24,10 @@ p {
   line-height: 32px;
 }
 
+footer p {
+  color: rgba(0, 0, 0, 0.80);
+}
+
 ul li {
   color:rgb(90, 102, 113);
   font-size: 1.1rem;
