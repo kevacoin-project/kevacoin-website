@@ -73,10 +73,11 @@ blockquote span{
 
 .jumbotron {
   position: relative;
-  background-image: url('../images/keva_background_sm.jpg');
+  background-image: url('../images/keva_background_colorful.jpg');
   border-radius: 0px;
   margin-bottom: 0;
   text-align: center;
+  background-size:cover;
 }
 
 .kva-container {
