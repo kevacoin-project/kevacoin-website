@@ -8,7 +8,7 @@
     <meta name="author" content="Kevacoin Core Developers">
     <link rel="icon" href="./images/fav_icon.png">
 
-    <title>Open source key-value database on blockchain</title>
+    <title>Android Mobile Wallet 9.0.0 Released</title>
 
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700%7COpen+Sans:400,600,700" rel="stylesheet">
     <!-- Bootstrap core CSS -->
@@ -56,62 +56,33 @@
 
     <main role="main" class="mt-5 mb-5">
       <div class="container kva-documentation">
-    <h1>Blog Posts</h1>
-<img src="images/desktop-2325627_1920.jpg" class="img-fluid" alt="Bike Jump" style="margin-bottom: 0px"/>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./android_keva_wallet_9_0.html">Android Mobile Wallet 9.0.0 Released</a>
-    </h2>
-    <p class="kva-blog-list-date">April 03 2025</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./support_keva.html">Support Kevacoin Development</a>
-    </h2>
-    <p class="kva-blog-list-date">February 27 2025</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./on_chain.html">Moving Our Blogs to Keva Blockchain</a>
-    </h2>
-    <p class="kva-blog-list-date">March 19 2021</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./ipfs_mobile_android_support.html">Keva Android App Now Supports IPFS Images!</a>
-    </h2>
-    <p class="kva-blog-list-date">November 20 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./ipfs_mobile.html">Keva and IPFS on Mobile Devices</a>
-    </h2>
-    <p class="kva-blog-list-date">September 24 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_electrumx.html">Decentralized Server for Kevacoin</a>
-    </h2>
-    <p class="kva-blog-list-date">August 23 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_combined_views.html">View Differently</a>
-    </h2>
-    <p class="kva-blog-list-date">June 09 2020</p>
-  </article>
-  <article>
-    <h2 class="kva-blog-list-title">
-      <a href="./keva_access_control.html">The Next Big Step</a>
-    </h2>
-    <p class="kva-blog-list-date">May 21 2020</p>
-  </article>
-<h2><br>
-<br>
-<br>
-<br></h2>
+    <h1 class="kva-blog-title">Android Mobile Wallet 9.0.0 Released</h1>
+<p class="kva-blog-list-date">April 03 2025</p>
+<img src="images/flowers-741965_1280.jpg" class="img-fluid" alt="KVA Community" style="margin-bottom: 30px"/>
+<p>We're excited to announce Kevacoin Android wallet 9.0.0!</p>
+<p>Highlights of this release:</p>
+<ul>
+<li>Support for the latest Android versions.</li>
+<li>Enhanced security and performance improvements.</li>
+</ul>
+<p>Download the APK <a href="https://kevacoin.org/#download">here</a>.</p>
+<p>A new ElectrumX Docker image has been released as the wallet's back-end. To pull the image:</p>
+<pre><code>docker pull kevacoinproject/electrumx
+</code></pre>
+<p>You can find the Github repository for the docker image <a href="https://github.com/kevacoin-project/docker-electrumx">here</a>.</p>
+<p>To run the server:</p>
+<pre><code>docker run \
+  --add-host=host.docker.internal:host-gateway \
+  -v /home/&lt;your username&gt;/electrumx:/data \
+  -e DAEMON_URL=http://&lt;kevacoind username&gt;:&lt;kevacoind password&gt;@&lt;kevacoid ip&gt;:&lt;rpc port&gt; \
+  -e DB_ENGINE=rocksdb \
+  -p 50001:50001 \
+  kevacoin-project/electrumx
+</code></pre>
+<p>The Kevacoin project maintains a public server, ec.kevacoin.org, which offers a TLS port on 50002.</p>
+<hr>
 <p class="kva-license-attr">
-Image by <a href="https://pixabay.com/users/theglassdesk-149631/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2325627">Becca Clark</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2325627">Pixabay</a>
+Image by <a href="https://pixabay.com/users/jillwellington-334088/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=741965">Jill Wellington</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=741965">Pixabay</a>
 </p>
       </div>
     </main>
